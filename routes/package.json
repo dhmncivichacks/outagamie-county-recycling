@@ -1,0 +1,8 @@
+{
+  "name": "@ocr/routes",
+  "version": "1.0.0",
+  "main": "index.compiled.js",
+  "dependencies": {
+      "terraformer": "^1.0.5"
+  }
+}

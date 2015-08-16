@@ -1,0 +1,106 @@
+[
+    {
+        "routeId": 0,
+        "eventId": "ai1ec-721@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 1,
+        "eventId": "ai1ec-725@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 2,
+        "eventId": "ai1ec-712@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 3,
+        "eventId": "ai1ec-712@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 4,
+        "eventId": "ai1ec-707@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 5,
+        "eventId": "ai1ec-707@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 6,
+        "eventId": "ai1ec-707@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 7,
+        "eventId": "ai1ec-707@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 8,
+        "eventId": "ai1ec-705@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 9,
+        "eventId": "ai1ec-705@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 10,
+        "eventId": "ai1ec-705@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 11,
+        "eventId": "ai1ec-705@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 12,
+        "eventId": "ai1ec-715@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 13,
+        "eventId": "ai1ec-715@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 14,
+        "eventId": "ai1ec-715@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 15,
+        "eventId": "ai1ec-715@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 16,
+        "eventId": "ai1ec-715@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 17,
+        "eventId": "ai1ec-711@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 18,
+        "eventId": "ai1ec-711@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 19,
+        "eventId": "ai1ec-711@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 20,
+        "eventId": "ai1ec-722@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 21,
+        "eventId": "ai1ec-722@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 22,
+        "eventId": "ai1ec-703@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 23,
+        "eventId":"ai1ec-703@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 24,
+        "eventId": "ai1ec-719@outagamiecounty.goelementbeta.com"
+    },
+    {
+        "routeId": 25,
+        "eventId": "ai1ec-719@outagamiecounty.goelementbeta.com"
+    }
+]

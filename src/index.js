@@ -2,7 +2,7 @@ import calendar from './calendar';
 import routes from './routes';
 import routeToEvent from '../data/route-to-event.json';
 
-function getEvent(route) {
+function getRouteEvent(route) {
     let events = calendar.getEvents();
     let map = routeToEvent.filter((item) => {
         return item.routeId === route.properties.Id;
@@ -27,8 +27,8 @@ function getNextIntervalWeekInDays(interval, seconds) {
 }
 
 function getNextRecycleDate(point, fromDate = new Date()) {
-    let route = routes.getRoute(point);
-    let event = getEvent(route);
+    let route = routes.getRouteAtPoint(point);
+    let event = getRouteEvent(route);
     let startDate = event.startDate;
     let fromTime = calendar.Time.fromJSDate(fromDate);
     fromTime.resetTo(fromTime.year, fromTime.month, fromTime.day, 0, 0, 0, fromTime.zone);

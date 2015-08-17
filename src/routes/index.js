@@ -1,7 +1,7 @@
 import fs from 'fs';
 import Terraformer from 'terraformer';
 
-let geojsonFile = fs.readFileSync(__dirname + '/recycling-routes.geojson', 'utf-8');
+let geojsonFile = fs.readFileSync(__dirname + '/../../data/recycling-routes.geojson', 'utf-8');
 let geojson = JSON.parse(geojsonFile);
 
 export default {

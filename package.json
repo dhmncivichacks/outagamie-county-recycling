@@ -2,10 +2,11 @@
   "name": "outagamie-county-recycling",
   "version": "1.0.0",
   "description": "Outagamie County recycling route geodata",
-  "main": "index.compiled.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "babel-node tests/index.js | faucet",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,13 @@
   },
   "homepage": "https://github.com/dhmncivichacks/outagamie-county-recycling#readme",
   "dependencies": {
-    "babel": "^5.8.20",
     "ical.js": "^1.1.2",
     "terraformer": "^1.0.5"
   },
   "devDependencies": {
-    "eslint": "^1.0.0"
+    "babel": "^5.8.20",
+    "eslint": "^1.0.0",
+    "faucet": "0.0.1",
+    "tape": "^4.2.0"
   }
 }

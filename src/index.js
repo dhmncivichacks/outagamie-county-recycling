@@ -1,6 +1,6 @@
 import calendar from './calendar';
 import routes from './routes';
-import routeToEvent from './route-to-event.json';
+import routeToEvent from '../data/route-to-event.json';
 
 function getEvent(route) {
     let events = calendar.getEvents();
@@ -19,17 +19,25 @@ function getEvent(route) {
     return new calendar.Event(event);
 }
 
+function getNextIntervalWeekInDays(interval, seconds) {
+    let days = seconds / 60 / 60 / 24;
+    let weeks = Math.ceil(days / 7);
+    let nextInterval = Math.max(1, Math.ceil(weeks / interval));
+    return (7 * interval * nextInterval);
+}
+
 function getNextRecycleDate(point, fromDate = new Date()) {
     let route = routes.getRoute(point);
     let event = getEvent(route);
     let startDate = event.startDate;
-    fromDate = calendar.Time.fromJSDate(fromDate);
-    if (startDate.compare(fromDate) < 0) {
-        let interval = event.component.getFirstPropertyValue('rrule').interval;
-        // TODO: support more recurrence types
-        if (event.getRecurrenceTypes().WEEKLY) {
-            startDate.adjust(7 * interval);
-        }
+    let fromTime = calendar.Time.fromJSDate(fromDate);
+    fromTime.resetTo(fromTime.year, fromTime.month, fromTime.day, 0, 0, 0, fromTime.zone);
+    let difference = fromTime.subtractDate(startDate);
+    let interval = event.component.getFirstPropertyValue('rrule').interval;
+    // TODO: support more recurrence types
+    if (event.getRecurrenceTypes().WEEKLY) {
+        let offset = (calendar.Time[route.properties.PICKUP.toUpperCase()] - startDate.toJSDate().getDay() - 1) * 24 * 60 * 60;
+        startDate.adjust(getNextIntervalWeekInDays(interval, difference.toSeconds() - offset));
     }
     let iterator = event.iterator(startDate);
     let recycleDate = null;
@@ -42,6 +50,4 @@ function getNextRecycleDate(point, fromDate = new Date()) {
     return recycleDate.toJSDate();
 }
 
-console.log(getNextRecycleDate([-88.271913, 44.267002]));
-console.log(getNextRecycleDate([-88.271913, 44.267002], new Date('August 26, 2015 00:00:00')));
-console.log(getNextRecycleDate([-88.271913, 44.267002]));
+export {getNextRecycleDate};

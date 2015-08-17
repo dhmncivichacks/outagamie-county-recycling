@@ -1,7 +1,7 @@
 import fs from 'fs';
 import ical from 'ical.js';
 
-let calendarFile = fs.readFileSync(__dirname + '/recycling-calendar.ics', 'utf-8');
+let calendarFile = fs.readFileSync(__dirname + '/../../data/recycling-calendar.ics', 'utf-8');
 
 export default {
     getEvents: function () {

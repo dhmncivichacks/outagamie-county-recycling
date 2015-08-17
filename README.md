@@ -36,7 +36,13 @@ Returns:
 
 # Support
 
-To see if your location is supported by this data, [check the map]().
+To see if your location is supported by this data, [check the map](https://github.com/dhmncivichacks/outagamie-county-recycling/blob/master/data/recycling-routes.geojson).
+
+# Contributing
+
+Contributions are very welcome! To get the most useful and complete data, we need your help.
+
+Route data is stored in `data/recycling-routes.geojson`. When adding more routes, make sure the associated calendar event in `data/recycling-calendar.ics` is mapped to the route in `data/route-to-event.json`.
 
 # License
 

@@ -3,6 +3,7 @@ import {getNextRecycleDate} from '../lib';
 
 const location1 = [-88.271913, 44.267002];
 const location2 = [-88.261194, 44.290477];
+const location3 = [-88.307391, 44.26176];
 
 let tests = [
     {
@@ -88,7 +89,7 @@ let tests = [
         location: location2,
         fromDate: 'September 8, 2015',
         expected: 'Mon Sep 21 2015 00:00:00 GMT-0500 (CDT)'
-    },
+    }
 ];
 
 tests.forEach(test => {
@@ -100,5 +101,10 @@ tests.forEach(test => {
             getNextRecycleDate(test.location, new Date(test.fromDate + ' 23:59:59')).toString(),
             test.expected);
         t.end();
-    })
+    });
+});
+
+tape('throw on bad data', t => {
+    t.plan(1);
+    t.throws(() => getNextRecycleDate(location3, new Date('September 8, 2015 00:00:00')));
 });

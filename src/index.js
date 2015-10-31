@@ -41,11 +41,16 @@ function getNextRecycleDate(point, fromDate = new Date()) {
     }
     let iterator = event.iterator(startDate);
     let recycleDate = null;
-    while (!recycleDate) {
+    let index = 0;
+    while (!recycleDate && index < 1000) {
         let next = iterator.next();
         if (calendar.Time[route.properties.PICKUP.toUpperCase()] === next.dayOfWeek()) {
             recycleDate = next;
         }
+        index++;
+    }
+    if (index === 1000) {
+        throw new Error('No recycle date found!');
     }
     return recycleDate.toJSDate();
 }

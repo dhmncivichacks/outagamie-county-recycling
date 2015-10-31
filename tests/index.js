@@ -89,6 +89,12 @@ let tests = [
         location: location2,
         fromDate: 'September 8, 2015',
         expected: 'Mon Sep 21 2015 00:00:00 GMT-0500 (CDT)'
+    },
+    {
+        name: '[location3] different pickup day',
+        location: location3,
+        fromDate: 'September 8, 2015',
+        expected: 'Tue Sep 08 2015 00:00:00 GMT-0500 (CDT)'
     }
 ];
 
@@ -102,9 +108,4 @@ tests.forEach(test => {
             test.expected);
         t.end();
     });
-});
-
-tape('throw on bad data', t => {
-    t.plan(1);
-    t.throws(() => getNextRecycleDate(location3, new Date('September 8, 2015 00:00:00')));
 });

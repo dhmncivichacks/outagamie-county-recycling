@@ -1,6 +1,6 @@
 {
   "name": "outagamie-county-recycling",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Outagamie County recycling route geodata",
   "main": "lib/index.js",
   "scripts": {
